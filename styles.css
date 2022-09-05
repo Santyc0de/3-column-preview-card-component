@@ -1,0 +1,161 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --padding: 30px;
+    --orange:hsl(31, 77%, 52%);
+    --blue:hsl(184, 100%, 22%);
+    --green: hsl(179, 100%, 13%);
+}
+
+body{
+    width: 100%;
+    min-width: 50vh;
+    height: 90vh;
+    display: grid;
+    justify-content: center;
+    
+}
+
+
+.container {
+    height: 120vh;
+    padding: 4.8vh;
+    display: grid;
+    grid-template-columns: 1fr 0fr 0fr; 
+    grid-template-rows: 1fr 1fr 1fr; 
+    gap: 0px 0px; 
+    grid-template-areas: 
+      "card1 . ."
+      "card2 . ."
+      "card3 . ."; 
+  }
+
+.card1 {
+    grid-area: card1;
+    background-color: var(--orange);
+    border-radius: 20px 20px 0px 0px;
+    padding: var(--padding);
+}
+.card2 {
+    grid-area: card2;
+    background-color: var(--blue);
+    padding: var(--padding);
+}
+.card3 { 
+    grid-area: card3; 
+    background-color: var(--green);
+    border-radius: 0px 0px 20px 20px;
+    padding: var(--padding);
+}
+
+.title{
+    color: white;
+}
+
+.paragraph{
+    color: white;
+}
+
+.card-button{
+    background-color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 20px;
+    margin-top: 15px;
+}
+
+.orange{
+    color: var(--orange);
+}
+
+.blue{
+    color: var(--blue);
+}
+
+.green{
+    color: var(--green);
+}
+
+@media (min-width:1440px){
+
+body{
+    width: 120vh;
+    font-size: 25px;
+}
+
+.container {
+    display: grid;
+    place-content: center;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 0fr 0fr 1fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+      ". . ."
+      ". . ."
+      "card1 card2 card3";
+  }
+
+  .logo{
+    width: 250px;
+    height: 200px;
+  }
+  
+  .card1 { 
+    padding-left: 5vh;
+    grid-area: card1;
+    width: 40vh;
+    height: 80vh;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-150%, -50%);
+    border-radius: 20px 0px 0px 20px;
+}
+  
+  .card2 { 
+    padding-left: 5vh;
+    grid-area: card2; 
+    width: 40vh;
+    height: 80vh;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+}
+  
+  .card3 { 
+    padding-left: 5vh;
+    grid-area: card3; 
+    width: 40vh;
+    height: 80vh;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(50%, -50%);
+    border-radius: 0px 20px 20px 0px;
+}
+
+.title{
+    font-size: 5vh;
+    margin-top: 4vh;
+}
+
+.paragraph{
+    font-size: 2.6vh;
+    margin-top: 3.5vh;
+}
+  
+.card-button{
+    margin-top: 5vh;
+    padding: 30px;
+    font-size: 2.5vh;
+    border-radius: 50px;
+}
+
+}
